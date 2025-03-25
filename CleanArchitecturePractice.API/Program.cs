@@ -1,3 +1,5 @@
+using CleanArchitecturePractice.API;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add SERVICES to the container.
@@ -6,6 +8,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// using CleanArchitecturePractice.API;
+builder.Services.AddAppDI();
 
 var app = builder.Build();
 
